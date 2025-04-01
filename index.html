@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Repositorio de Archivos</title>
+  <!-- Enlaza tu hoja de estilos CSS -->
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+  <!-- Encabezado con logo y barra de búsqueda -->
+  <header class="header">
+    <div class="logo">LOGO</div>
+    <div class="search-container">
+      <input type="text" placeholder="Búsqueda..." />
+      <button class="btn-buscar">Buscar</button>
+    </div>
+  </header>
+
+  <!-- Contenedor principal que engloba el menú lateral y el contenido -->
+  <div class="container">
+    <!-- Menú lateral -->
+    <aside class="sidebar">
+      <nav>
+        <ul>
+          <li><a href="#">Menú 1</a></li>
+          <li><a href="#">Menú 2</a></li>
+          <li><a href="#">Menú 3</a></li>
+          <li><a href="#">...</a></li>
+          <li><a href="#">Menú Z</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Zona principal donde se muestran los archivos -->
+    <main class="main-content">
+      <h1>Menú 1</h1>
+
+      <div class="file-grid">
+        <!-- Ejemplo de tarjetas de archivo con enlaces de descarga -->
+        <div class="file-box">
+          <a href="archivo1.zip" download>Archivo 1</a>
+        </div>
+        <div class="file-box">
+          <a href="archivo2.zip" download>Archivo 2</a>
+        </div>
+        <div class="file-box">
+          <a href="archivo3.zip" download>Archivo 3</a>
+        </div>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
