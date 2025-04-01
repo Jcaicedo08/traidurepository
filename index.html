@@ -4,13 +4,9 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Repositorio de Archivos</title>
-  <!--
-    Si tienes la fuente "Söhne" instalada en tu sistema, se usará.
-    De lo contrario, el navegador mostrará la fuente de fallback (Arial, sans-serif).
-  -->
   <style>
     /* -------------------------------------------------------
-       ESTILOS GLOBALES
+       REINICIO Y ESTILOS GLOBALES
     ------------------------------------------------------- */
     * {
       margin: 0;
@@ -19,13 +15,12 @@
     }
     body {
       font-family: "Söhne", Arial, sans-serif;
-      background-color: #ffffff; /* Blanco de fondo */
+      background-color: #ffffff; /* Fondo blanco */
       color: #000000;           /* Texto en negro */
     }
     
     /* -------------------------------------------------------
-       CONTENEDOR PRINCIPAL
-       (Barra lateral a la izquierda, contenido a la derecha)
+       BARRA LATERAL (SIDEBAR)
     ------------------------------------------------------- */
     .sidebar {
       position: fixed;
@@ -33,20 +28,21 @@
       top: 0;
       width: 250px;
       height: 100vh;
-      background-color: #000; /* Negro */
+      background-color: #000000; /* Negro */
       padding: 1rem;
-      /* Esquinas redondeadas en la parte derecha */
-      border-radius: 0 20px 20px 0;
+      border-radius: 0 20px 20px 0; /* Bordes redondeados a la derecha */
     }
-    
-    /* Logo en la barra lateral */
-    .logo {
-      color: #fff; 
-      font-size: 1.5rem;
-      font-weight: bold;
+    .logo{
+      text-align: center;
       margin-bottom: 2rem;
     }
-    
+    .logo img{
+      width: 100%;/* Ajusta a todo el ancho del contenedor */
+      max-width: 150px; /*limite maximo para que no se estire */
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
     /* Menú lateral */
     .menu {
       list-style: none;
@@ -56,7 +52,7 @@
     }
     .menu li a {
       display: block;
-      color: #fff;
+      color: #ffffff;
       text-decoration: none;
       padding: 0.5rem 1rem;
       border-radius: 10px;
@@ -65,33 +61,30 @@
     .menu li a:hover,
     .menu li a.active {
       background-color: #f57c00; /* Naranja */
-      color: #fff;
+      color: #ffffff;
     }
-
+    
     /* -------------------------------------------------------
        CONTENIDO PRINCIPAL
-       (Se ubica a la derecha de la barra lateral)
     ------------------------------------------------------- */
     .main-content {
       margin-left: 250px; /* Deja espacio para la barra lateral */
       padding: 1.5rem;
       min-height: 100vh;
     }
-
-    /* Encabezado con la barra de búsqueda */
+    
+    /* Encabezado con barra de búsqueda */
     header {
       display: flex;
-      justify-content: flex-start;
       align-items: center;
       margin-bottom: 1rem;
     }
-    
     .search-container {
       display: flex;
       align-items: center;
-      border-radius: 20px; /* Esquinas redondeadas */
-      overflow: hidden;    /* Para que el borde redondeado aplique al input y botón */
-      border: 2px solid #000;
+      border-radius: 20px; /* Bordes redondeados */
+      overflow: hidden;
+      border: 2px solid #000000;
     }
     .search-container input {
       border: none;
@@ -103,15 +96,16 @@
     .search-container button {
       background-color: #f57c00;
       border: none;
-      color: #fff;
+      color: #ffffff;
       padding: 0.5rem 1rem;
       cursor: pointer;
       font-size: 1rem;
+      transition: background-color 0.3s;
     }
     .search-container button:hover {
       background-color: #e56d00; /* Naranja más oscuro */
     }
-
+    
     /* -------------------------------------------------------
        SECCIONES (MENÚS) CON TRANSICIÓN
     ------------------------------------------------------- */
@@ -124,38 +118,46 @@
       display: block;
       opacity: 1;
     }
-    
-    /* Títulos de sección */
     .section h1 {
       margin-bottom: 1rem;
     }
-
-    /* Contenedor de archivos */
+    
+    /* Contenedor para archivos */
     .files-container {
       display: flex;
-      gap: 1rem;
       flex-wrap: wrap;
+      gap: 1rem;
     }
-    
     /* Tarjetas de archivos */
-    .file-box {
-      background-color: #f57c00; /* Naranja */
-      color: #fff;
-      flex: 1 1 150px;   /* Mínimo 150px de ancho, se adaptan al espacio */
-      height: 100px;
+    .file-box a {
+
       display: flex;
+      flex-direction: column;
       align-items: center;
-      justify-content: center;
-      border-radius: 10px;
-      transition: transform 0.3s;
+      text-decoration: none;
+      color: #f57c00;
+      
+
+    }
+    .file-box img {
+      width: 192px;
+      height: 108px;
+      margin-bottom: 1rem;
+    }
+    .file-box span {
       font-weight: bold;
       text-align: center;
+      font-size: 0.9rem ;
     }
     .file-box:hover {
-      transform: scale(1.05);
+      transform: scale(1.1);
+      box-shadow: 0 0 0 rgba(255,255,255,0.2);
     }
-
-    /* Ajustes responsivos para pantallas pequeñas */
+    
+    
+    /* -------------------------------------------------------
+       RESPONSIVIDAD
+    ------------------------------------------------------- */
     @media (max-width: 768px) {
       .sidebar {
         position: static;
@@ -170,14 +172,15 @@
   </style>
 </head>
 <body>
-
   <!-- BARRA LATERAL (SIDEBAR) -->
   <div class="sidebar">
-    <div class="logo">LOGO</div>
+    <div class="logo">
+      <img src="TRADU LOGO WHITE-8.png" alt="Logo Tradu"?>
+    </div>
+
     <ul class="menu">
-      <!-- data-section indica qué sección debe mostrarse al hacer clic -->
-      <li><a href="#" data-section="menu1" class="active">Menú 1</a></li>
-      <li><a href="#" data-section="menu2">Menú 2</a></li>
+      <li><a href="#" data-section="brandbook" class="active">Brand Guideline</a></li>
+      <li><a href="#" data-section="colores">Colores</a></li>
       <li><a href="#" data-section="menu3">Menú 3</a></li>
       <li><a href="#" data-section="menu4">Menú 4</a></li>
     </ul>
@@ -186,29 +189,44 @@
   <!-- CONTENIDO PRINCIPAL -->
   <div class="main-content">
     <header>
-      <!-- Barra de búsqueda -->
       <div class="search-container">
-        <input type="text" placeholder="Búsqueda...">
-        <button><span>🔍</span></button>
+        <input type="text" placeholder="Búsqueda..." />
+        <button>🔍</button>
       </div>
     </header>
 
-    <!-- Secciones (una para cada Menú) -->
-    <section id="menu1" class="section active">
-      <h1>Menú 1</h1>
+    <!-- Secciones de Menú -->
+    <section id="brandbook" class="section active">
+      <h1>Brand Guideline</h1>
       <div class="files-container">
-        <div class="file-box">Archivo 1</div>
-        <div class="file-box">Archivo 2</div>
-        <div class="file-box">Archivo 3</div>
+        <div class="file-box">
+          <a href="Tradu_Guidelines_v1.2 (1).pdf" download>
+          <img src="Tradubrand book cover.png" alt="PDF"/>
+          <span>Tradu Brand Guideline</span>  
+          </a>
+        </div>
+        
       </div>
     </section>
 
-    <section id="menu2" class="section">
-      <h1>Menú 2</h1>
+    <section id="colores" class="section">
+      <h1>Colores</h1>
       <div class="files-container">
-        <div class="file-box">Archivo A</div>
-        <div class="file-box">Archivo B</div>
-        <div class="file-box">Archivo C</div>
+        <div class="file-box">
+          <a> <img src="Off Black.png" alt="Off Black"/>
+          <span>Off Black</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="Off White.png" alt="Off White"/>
+          <span>Off White</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="Tradu Tangerine.png" alt="Tradu Tangerine"/>
+          <span >Tradu Tangerine</span>
+          </a>
+        </div>
       </div>
     </section>
 
@@ -226,32 +244,31 @@
       <p>Contenido adicional para el Menú 4.</p>
     </section>
   </div>
-
-  <!-- SCRIPT PARA CAMBIAR DE SECCIONES CON TRANSICIÓN BÁSICA -->
+  
   <script>
     document.addEventListener("DOMContentLoaded", () => {
-      const linksMenu = document.querySelectorAll(".menu li a");
+      // Selecciona todos los enlaces del menú
+      const menuLinks = document.querySelectorAll(".menu li a");
+      // Selecciona todas las secciones
       const sections = document.querySelectorAll(".section");
-      
-      linksMenu.forEach(link => {
+
+      menuLinks.forEach(link => {
         link.addEventListener("click", event => {
           event.preventDefault();
-          
-          // 1. Remover 'active' de todos los enlaces
-          linksMenu.forEach(lnk => lnk.classList.remove("active"));
-          // 2. Ocultar todas las secciones
-          sections.forEach(sec => sec.classList.remove("active"));
-          
-          // 3. Agregar 'active' al enlace clicado
+          // Remueve la clase 'active' de todos los enlaces
+          menuLinks.forEach(link => link.classList.remove("active"));
+          // Remueve la clase 'active' de todas las secciones
+          sections.forEach(section => section.classList.remove("active"));
+          // Agrega la clase 'active' al enlace clicado
           link.classList.add("active");
-          // 4. Mostrar la sección correspondiente
-          const target = link.getAttribute("data-section");
-          const sectionToShow = document.getElementById(target);
-          sectionToShow.classList.add("active");
+          // Obtén el id de la sección a mostrar desde el atributo data-section
+          const sectionId = link.getAttribute("data-section");
+          const targetSection = document.getElementById(sectionId);
+          // Muestra la sección correspondiente
+          targetSection.classList.add("active");
         });
       });
     });
   </script>
-
 </body>
 </html>

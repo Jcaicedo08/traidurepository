@@ -1,124 +1,170 @@
-/* Reseteo básico de márgenes y paddings */
+/* -------------------------------------------------------
+   REINICIO Y ESTILOS GLOBALES
+------------------------------------------------------- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Estilos del encabezado */
-.header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #000000; /* Fondo negro */
-  color: #ffffff;           /* Texto blanco */
-  padding: 1rem;
+body {
+  font-family: "Söhne", Arial, sans-serif;
+  background-color: #ffffff; /* Fondo blanco */
+  color: #000000;           /* Texto en negro */
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+/* -------------------------------------------------------
+   BARRA LATERAL (SIDEBAR)
+------------------------------------------------------- */
+.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 250px;
+  height: 100vh;
+  background-color: #000000; /* Negro */
+  padding: 1rem;
+  border-radius: 0 20px 20px 0; /* Bordes redondeados a la derecha */
+}
+
+.logo{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.logo img{
+  width: 100%;/* Ajusta a todo el ancho del contenedor */
+  max-width: 150px; /*limite maximo para que no se estire */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Menú lateral */
+.menu {
+  list-style: none;
+}
+
+.menu li {
+  margin-bottom: 1rem;
+}
+
+.menu li a {
+  display: block;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 10px;
+  transition: background-color 0.3s;
+}
+
+.menu li a:hover,
+.menu li a.active {
+  background-color: #f57c00; /* Naranja */
+  color: #ffffff;
+}
+
+/* -------------------------------------------------------
+   CONTENIDO PRINCIPAL
+------------------------------------------------------- */
+.main-content {
+  margin-left: 250px; /* Deja espacio para el sidebar */
+  padding: 1.5rem;
+  min-height: 100vh;
+}
+
+/* Encabezado con barra de búsqueda */
+header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 
 .search-container {
   display: flex;
   align-items: center;
+  border-radius: 20px; /* Bordes redondeados */
+  overflow: hidden;
+  border: 2px solid #000000;
 }
 
 .search-container input {
-  padding: 0.5rem;
-  border: 1px solid #cccccc;
-  border-radius: 4px 0 0 4px;
-  outline: none;
-}
-
-.btn-buscar {
-  padding: 0.55rem 1rem;
-  background-color: #69a765; /* Un verde suave */
-  color: #fff;
   border: none;
-  border-radius: 0 4px 4px 0;
-  cursor: pointer;
-}
-
-.btn-buscar:hover {
-  background-color: #58a15b; /* Ligero cambio al pasar el ratón */
-}
-
-/* Contenedor que engloba menú y contenido */
-.container {
-  display: flex;
-  min-height: calc(100vh - 64px); /* Ajusta según altura del header */
-}
-
-/* Barra lateral */
-.sidebar {
-  width: 250px;
-  background-color: #2e5da8; /* Ejemplo de azul */
-  padding: 1rem;
-}
-
-/* Estilo de la lista del menú */
-.sidebar ul {
-  list-style: none;
-}
-
-.sidebar ul li {
-  margin-bottom: 0.8rem;
-}
-
-.sidebar ul li a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: 500;
-  display: block;
-  padding: 0.5rem 0;
-}
-
-.sidebar ul li a:hover {
-  background-color: #1c3970; /* Oscurecer al pasar el ratón */
-  border-radius: 4px;
-  padding-left: 0.5rem;
-}
-
-/* Zona principal */
-.main-content {
+  padding: 0.5rem 1rem;
+  outline: none;
+  font-size: 1rem;
   flex: 1;
-  padding: 1.5rem;
-  background-color: #f9f9f9;
 }
 
-.main-content h1 {
+.search-container button {
+  background-color: #f57c00;
+  border: none;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.search-container button:hover {
+  background-color: #e56d00; /* Naranja más oscuro */
+}
+
+/* -------------------------------------------------------
+   SECCIONES (MENÚS)
+------------------------------------------------------- */
+.section {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out;
+}
+
+.section.active {
+  display: block;
+  opacity: 1;
+}
+
+.section h1 {
   margin-bottom: 1rem;
 }
 
-/* Grid de archivos */
-.file-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+/* Contenedor para archivos */
+.files-container {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
 }
 
-/* Cada caja de archivo */
+/* Tarjetas de archivos */
 .file-box {
-  background-color: #2e5da8; /* Azul para simular tu boceto */
+  background-color: #f57c00; /* Naranja */
   color: #ffffff;
+  flex: 1 1 150px;
+  height: 100px;
+  width: 200px;
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100px;
-  border-radius: 8px;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  font-weight: bold;
   text-align: center;
-  transition: transform 0.2s;
 }
 
 .file-box:hover {
-  transform: scale(1.03);
+  transform: scale(1.05);
 }
 
-/* El enlace dentro de la caja de archivo */
-.file-box a {
-  color: #ffffff;
-  text-decoration: none;
-  font-weight: bold;
+/* -------------------------------------------------------
+   RESPONSIVIDAD
+------------------------------------------------------- */
+@media (max-width: 768px) {
+  .sidebar {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    height: auto;
+  }
+  .main-content {
+    margin-left: 0;
+  }
 }
