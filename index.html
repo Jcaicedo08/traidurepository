@@ -5,6 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Repositorio de Archivos</title>
   <style>
+
+    @font-face {
+      font-family: 'Shone' ;
+      src: url(TestSohne-Kraftig.otf);
+      
+    }
+    @font-face {
+      font-family:'Shonep' ;
+      src: url(TestSohne-Leicht.otf);
+    }
     /* -------------------------------------------------------
        REINICIO Y ESTILOS GLOBALES
     ------------------------------------------------------- */
@@ -14,8 +24,8 @@
       box-sizing: border-box;
     }
     body {
-      font-family: "Söhne", Arial, sans-serif;
-      background-color: #ffffff; /* Fondo blanco */
+      font-family: "Shone", Arial, sans-serif;
+      background-color: #f8f8f8; /* Fondo blanco */
       color: #000000;           /* Texto en negro */
     }
     
@@ -28,9 +38,9 @@
       top: 0;
       width: 250px;
       height: 100vh;
-      background-color: #000000; /* Negro */
+      background-color: #151515; /* Negro */
       padding: 1rem;
-      border-radius: 0 20px 20px 0; /* Bordes redondeados a la derecha */
+      /*border-radius: 0 20px 20px 0;*/ /* Bordes redondeados a la derecha */
     }
     .logo{
       text-align: center;
@@ -52,16 +62,16 @@
     }
     .menu li a {
       display: block;
-      color: #ffffff;
+      color: #ff6101;
       text-decoration: none;
       padding: 0.5rem 1rem;
-      border-radius: 10px;
+      /*border-radius: 10px;*/
       transition: background-color 0.3s;
     }
     .menu li a:hover,
     .menu li a.active {
-      background-color: #f57c00; /* Naranja */
-      color: #ffffff;
+      background-color: #ff6101; /* Naranja */
+      color: #f8f8f8;
     }
     
     /* -------------------------------------------------------
@@ -94,16 +104,16 @@
       flex: 1;
     }
     .search-container button {
-      background-color: #f57c00;
+      background-color: #ff6101;
       border: none;
-      color: #ffffff;
+      color: #f8f8f8;
       padding: 0.5rem 1rem;
       cursor: pointer;
       font-size: 1rem;
       transition: background-color 0.3s;
     }
     .search-container button:hover {
-      background-color: #e56d00; /* Naranja más oscuro */
+      background-color: #ff6101; /* Naranja más oscuro */
     }
     
     /* -------------------------------------------------------
@@ -132,10 +142,11 @@
     .file-box a {
 
       display: flex;
+      font-family: 'Shonep';
       flex-direction: column;
       align-items: center;
       text-decoration: none;
-      color: #f57c00;
+      color: #ff6101;
       
 
     }
@@ -181,7 +192,7 @@
     <ul class="menu">
       <li><a href="#" data-section="brandbook" class="active">Brand Guideline</a></li>
       <li><a href="#" data-section="colores">Colores</a></li>
-      <li><a href="#" data-section="menu3">Menú 3</a></li>
+      <li><a href="#" data-section="redes sociales">Redes Sociales</a></li>
       <li><a href="#" data-section="menu4">Menú 4</a></li>
     </ul>
   </div>
@@ -230,8 +241,8 @@
       </div>
     </section>
 
-    <section id="menu3" class="section">
-      <h1>Menú 3</h1>
+    <section id="redes sociales" class="section">
+      <h1>Redes Sociales</h1>
       <div class="files-container">
         <div class="file-box">Archivo X</div>
         <div class="file-box">Archivo Y</div>
