@@ -8,12 +8,12 @@
 
     @font-face {
       font-family: 'Shone' ;
-      src: url(TestSohne-Kraftig.otf);
+      src: url(Tipografias/TestSohne-Kraftig.otf);
       
     }
     @font-face {
       font-family:'Shonep' ;
-      src: url(TestSohne-Leicht.otf);
+      src: url(Tipografias/TestSohne-Leicht.otf);
     }
     /* -------------------------------------------------------
        REINICIO Y ESTILOS GLOBALES
@@ -151,10 +151,12 @@
 
     }
     .file-box img {
-      width: 192px;
-      height: 108px;
+      width: 341px;
+      height: 196px;
       margin-bottom: 1rem;
     }
+    
+
     .file-box span {
       font-weight: bold;
       text-align: center;
@@ -164,7 +166,63 @@
       transform: scale(1.1);
       box-shadow: 0 0 0 rgba(255,255,255,0.2);
     }
+
+    .file-box-ig a {
+
+    display: flex;
+    font-family: 'Shonep';
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ff6101;
+
+
+    }
+    .file-box-ig img {
+    width: 108px;
+    height: 192px;
+    margin-bottom: 1rem;
+    }
+
+
+    .file-box-ig span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem ;
+    }
+    .file-box-ig:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 rgba(255,255,255,0.2);
+    }
     
+
+    .file-box-lk a {
+
+    display: flex;
+    font-family: 'Shonep';
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #ff6101;
+
+
+    }
+    .file-box-lk img {
+    width: 192px;
+    height: 192px;
+    margin-bottom: 1rem;
+    }
+
+
+    .file-box-lk span {
+    font-weight: bold;
+    text-align: center;
+    font-size: 0.9rem ;
+    }
+    .file-box-lk:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 0 rgba(255,255,255,0.2);
+    }
     
     /* -------------------------------------------------------
        RESPONSIVIDAD
@@ -186,14 +244,15 @@
   <!-- BARRA LATERAL (SIDEBAR) -->
   <div class="sidebar">
     <div class="logo">
-      <img src="TRADU LOGO WHITE-8.png" alt="Logo Tradu"?>
+      <img src="img/TRADU LOGO WHITE-8.png" alt="Logo Tradu"?>
     </div>
 
     <ul class="menu">
       <li><a href="#" data-section="brandbook" class="active">Brand Guideline</a></li>
       <li><a href="#" data-section="colores">Colores</a></li>
       <li><a href="#" data-section="redes sociales">Redes Sociales</a></li>
-      <li><a href="#" data-section="menu4">Menú 4</a></li>
+      <li><a href="#" data-section="tipografias">Tipografias</a></li>
+      <li><a href="#" data-section="recursos">Recursos</a></li>
     </ul>
   </div>
   
@@ -211,8 +270,8 @@
       <h1>Brand Guideline</h1>
       <div class="files-container">
         <div class="file-box">
-          <a href="Tradu_Guidelines_v1.2 (1).pdf" download>
-          <img src="Tradubrand book cover.png" alt="PDF"/>
+          <a href="PDF/Tradu_Guidelines_v1.2.pdf" target="_blank">
+          <img src="img/Tradubrand book cover.png" alt="PDF"/>
           <span>Tradu Brand Guideline</span>  
           </a>
         </div>
@@ -224,35 +283,115 @@
       <h1>Colores</h1>
       <div class="files-container">
         <div class="file-box">
-          <a> <img src="Off Black.png" alt="Off Black"/>
+          <a> <img src="img/Off Black.png" alt="Off Black"/>
           <span>Off Black</span>
           </a>
         </div>
         <div class="file-box">
-          <a><img src="Off White.png" alt="Off White"/>
+          <a><img src="img/Off White.png" alt="Off White"/>
           <span>Off White</span>
           </a>
         </div>
         <div class="file-box">
-          <a><img src="Tradu Tangerine.png" alt="Tradu Tangerine"/>
+          <a><img src="img/White.png" alt="White"/>
+          <span >White</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="img/Light Platinum.png" alt="Light Platinum"/>
+          <span >Light Platinum</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="img/Platinum.png" alt="Platinum"/>
+          <span >Platinum</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="img/Platinumky.png" alt="Platinum Keyline"/>
+          <span >Platinum Keyline</span>
+          </a>
+        </div>
+        <div class="file-box">
+          <a><img src="img/Dark Platinum.png" alt="Dark Platinum"/>
+          <span >Platinum</span>
+          </a>
+        </div>
+
+        <div class="file-box">
+          <a><img src="img/Tradu Tangerine.png" alt="Tradu Tangerine"/>
           <span >Tradu Tangerine</span>
           </a>
         </div>
-      </div>
+        <div class="file-box">
+          <a><img src="img/Tradu Tangerineky.png" alt="Tradu Tangerine Keyline"/>
+          <span >Tradu Tangerine Keyline</span>
+          </a>
+        </div>
+      </div> 
     </section>
 
     <section id="redes sociales" class="section">
       <h1>Redes Sociales</h1>
       <div class="files-container">
-        <div class="file-box">Archivo X</div>
-        <div class="file-box">Archivo Y</div>
-        <div class="file-box">Archivo Z</div>
+        <div class="file-box-ig">
+          <a><img src="img/prevpostig.png" alt="previsualizacion post instagram"/>
+          <span>Ejemplo instagram</span>  
+          </a>
+          </div>
+        <div class="file-box-lk">
+          <a><img src="img/prevpostlk.png" alt="previsualizacion post linkedln"/>
+          <span>Ejemplo linkedln</span>
+          </a>  
+          </div>
+        <div class="file-box">
+          <a><img src="img/prevdifpost.png" alt="previsualizacion diferentes posts"/>
+          <span>Ejemplo diferentes posts</span>
+          </a>
+        </div>
       </div>
     </section>
 
-    <section id="menu4" class="section">
-      <h1>Menú 4</h1>
-      <p>Contenido adicional para el Menú 4.</p>
+    <section id="tipografias" class="section">
+      <h1>Tipografias</h1>
+      <div class="files-container">
+        <div class="file-box">
+          <a href="Tipografias/TestSohne-Leicht.otf" download="TestSohne-Leicht">
+          <img src="img/Sohne Leicht.png" alt="sohne Leicht "/>
+          <span>Sohne Leicht</span> 
+          </a>
+        </div>
+        <div class="file-box">
+          <a href="Tipografias/TestSohne-Buch.otf" download="TestSohne-Buch">
+          <img src="img/Sohne Buch.png" alt="sohne Buch "/>
+          <span>Sohne Buch</span> 
+          </a>
+        </div>
+        <div class="file-box">
+          <a href="Tipografias/TestSohne-Kraftig.otf" download="TestSohne-Kraftig">
+          <img src="img/Sohne Kraft.png" alt="sohne Kraft "/>
+          <span>Sohne Kraft</span> 
+          </a>
+        </div>
+        <div class="file-box">
+          <a href="Tipografias/Blender_Pro_Bold.ttf" download="Blender_Pro_Bold">
+          <img src="img/Blender Pro.png" alt="Blender Pro bold "/>
+          <span>Blender Pro Bold</span> 
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section id="recursos" class="section">
+      <h1>Recursos</h1>
+      <div class="files-container">
+        <div class="file-box">
+          <a href="recursos/RECURSOS TRADU.ai" download="Recursos">
+          <img src="img/recursos.png" alt="recursos"/>
+          <span>Recursos</span>  
+          </a>   
+        </div>  
+      </div>
     </section>
   </div>
   
