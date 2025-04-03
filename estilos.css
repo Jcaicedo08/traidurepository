@@ -1,3 +1,12 @@
+@font-face {
+  font-family: 'Shone' ;
+  src: url(Tipografias/TestSohne-Kraftig.otf);
+  
+}
+@font-face {
+  font-family:'Shonep' ;
+  src: url(Tipografias/TestSohne-Leicht.otf);
+}
 /* -------------------------------------------------------
    REINICIO Y ESTILOS GLOBALES
 ------------------------------------------------------- */
@@ -6,10 +15,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 body {
-  font-family: "Söhne", Arial, sans-serif;
-  background-color: #ffffff; /* Fondo blanco */
+  font-family: "Shone", Arial, sans-serif;
+  background-color: #f8f8f8; /* Fondo blanco */
   color: #000000;           /* Texto en negro */
 }
 
@@ -22,11 +30,10 @@ body {
   top: 0;
   width: 250px;
   height: 100vh;
-  background-color: #000000; /* Negro */
+  background-color: #151515; /* Negro */
   padding: 1rem;
-  border-radius: 0 20px 20px 0; /* Bordes redondeados a la derecha */
+  /*border-radius: 0 20px 20px 0;*/ /* Bordes redondeados a la derecha */
 }
-
 .logo{
   text-align: center;
   margin-bottom: 2rem;
@@ -38,36 +45,32 @@ body {
   display: block;
   margin: 0 auto;
 }
-
 /* Menú lateral */
 .menu {
   list-style: none;
 }
-
 .menu li {
   margin-bottom: 1rem;
 }
-
 .menu li a {
   display: block;
-  color: #ffffff;
+  color: #ff6101;
   text-decoration: none;
   padding: 0.5rem 1rem;
-  border-radius: 10px;
+  /*border-radius: 10px;*/
   transition: background-color 0.3s;
 }
-
 .menu li a:hover,
 .menu li a.active {
-  background-color: #f57c00; /* Naranja */
-  color: #ffffff;
+  background-color: #ff6101; /* Naranja */
+  color: #f8f8f8;
 }
 
 /* -------------------------------------------------------
    CONTENIDO PRINCIPAL
 ------------------------------------------------------- */
 .main-content {
-  margin-left: 250px; /* Deja espacio para el sidebar */
+  margin-left: 250px; /* Deja espacio para la barra lateral */
   padding: 1.5rem;
   min-height: 100vh;
 }
@@ -78,7 +81,6 @@ header {
   align-items: center;
   margin-bottom: 1rem;
 }
-
 .search-container {
   display: flex;
   align-items: center;
@@ -86,7 +88,6 @@ header {
   overflow: hidden;
   border: 2px solid #000000;
 }
-
 .search-container input {
   border: none;
   padding: 0.5rem 1rem;
@@ -94,35 +95,31 @@ header {
   font-size: 1rem;
   flex: 1;
 }
-
 .search-container button {
-  background-color: #f57c00;
+  background-color: #ff6101;
   border: none;
-  color: #ffffff;
+  color: #f8f8f8;
   padding: 0.5rem 1rem;
   cursor: pointer;
   font-size: 1rem;
   transition: background-color 0.3s;
 }
-
 .search-container button:hover {
-  background-color: #e56d00; /* Naranja más oscuro */
+  background-color: #ff6101; /* Naranja más oscuro */
 }
 
 /* -------------------------------------------------------
-   SECCIONES (MENÚS)
+   SECCIONES (MENÚS) CON TRANSICIÓN
 ------------------------------------------------------- */
 .section {
   display: none;
   opacity: 0;
   transition: opacity 0.4s ease-in-out;
 }
-
 .section.active {
   display: block;
   opacity: 1;
 }
-
 .section h1 {
   margin-bottom: 1rem;
 }
@@ -133,25 +130,90 @@ header {
   flex-wrap: wrap;
   gap: 1rem;
 }
-
 /* Tarjetas de archivos */
-.file-box {
-  background-color: #f57c00; /* Naranja */
-  color: #ffffff;
-  flex: 1 1 150px;
-  height: 100px;
-  width: 200px;
+.file-box a {
+
   display: flex;
+  font-family: 'Shonep';
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-  transition: transform 0.3s;
-  font-weight: bold;
-  text-align: center;
+  text-decoration: none;
+  color: #ff6101;
+  
+
+}
+.file-box img {
+  width: 341px;
+  height: 196px;
+  margin-bottom: 0.5rem;
 }
 
+
+.file-box span {
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem ;
+}
 .file-box:hover {
   transform: scale(1.05);
+  box-shadow: 10px 10px 10px 2px rgba(210,210,210,0.5);
+}
+
+.file-box-ig a {
+
+display: flex;
+font-family: 'Shonep';
+flex-direction: column;
+align-items: center;
+text-decoration: none;
+color: #ff6101;
+
+
+}
+.file-box-ig img {
+width: 108px;
+height: 192px;
+margin-bottom: 1rem;
+}
+
+
+.file-box-ig span {
+font-weight: bold;
+text-align: center;
+font-size: 0.9rem ;
+}
+.file-box-ig:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px 2px rgba(210,210,210,0.5);
+}
+
+
+.file-box-lk a {
+
+display: flex;
+font-family: 'Shonep';
+flex-direction: column;
+align-items: center;
+text-decoration: none;
+color: #ff6101;
+
+
+}
+.file-box-lk img {
+width: 192px;
+height: 192px;
+margin-bottom: 1rem;
+}
+
+
+.file-box-lk span {
+font-weight: bold;
+text-align: center;
+font-size: 0.9rem ;
+}
+.file-box-lk:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 10px 2px rgba(210,210,210,0.5);
 }
 
 /* -------------------------------------------------------
