@@ -29,7 +29,8 @@ document.getElementById('loginForm').addEventListener('submit', function(e) {
     // Guardar estado de sesión
     sessionStorage.setItem('authenticated', 'true');
     } else {
-    document.getElementById('errorMsg').textContent = 'Usuario o contraseña incorrectos';
+    document.getElementById('errorMsg').textContent = 'incorrect user or password ';
+    document,getElementById('errorMsg').style.color = '#ff6101'
     }
 });
 
