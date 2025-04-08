@@ -48,11 +48,16 @@ body {
   border: 2px solid #ff6101;
 }
 
-#loginPopup h2 {
-  color: #ff6101;
-  margin-bottom: 1.5rem;
+.login-logo {
   text-align: center;
-  font-family: "Shone", Arial, sans-serif;
+  margin-bottom: 1.5rem;
+}
+
+.login-logo img {
+  width: 10%;
+  max-width: 169px;
+  height: 10%;
+  max-height: 108px;
 }
 
 #loginForm div {
@@ -184,7 +189,16 @@ header {
   font-size: 1rem;
   flex: 1;
 }
+.search-icon {
+  width: 17.3px;
+  height: 17.3px;
+  display: block;
+  /* Ajusta estos valores según el tamaño de tu imagen */
+}
 .search-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   background-color: #ff6101;
   border: none;
   color: #f8f8f8;

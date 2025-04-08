@@ -1,7 +1,8 @@
 // Datos de usuarios directamente en el script
 const users = [
     { username: "admin", password: "tradu123" },
-    { username: "usuario", password: "clave123" }
+    { username: "JuanC", password: "Juan123" },
+    { username: "JulianB", password: "Julian123"}
 ];
 
 document.getElementById('loginForm').addEventListener('submit', function(e) {
