@@ -7,6 +7,25 @@
   <link rel="stylesheet" href="estilos.css"/>
 </head>
 <body>
+
+  <!-- POPUP DE LOGIN -->
+  <div id="overlay"></div>
+  <div id="loginPopup">
+    <h2>Iniciar Sesión</h2>
+    <form id="loginForm">
+      <div>
+        <label for="username">Usuario:</label>
+        <input type="text" id="username" required>
+      </div>
+      <div>
+        <label for="password">Contraseña:</label>
+        <input type="password" id="password" required>
+      </div>
+      <button type="submit">Ingresar</button>
+      <p id="errorMsg"></p>
+    </form>
+  </div>
+
   <!-- BARRA LATERAL (SIDEBAR) -->
   <div class="sidebar">
     <div class="logo">
@@ -162,5 +181,6 @@
   </div>
   
   <script src="script.js"></script>
+  <script src="credentials.js"></script>
 </body>
 </html>
